@@ -1,0 +1,41 @@
+#!/bin/bash
+
+####################################
+# Name: <Your name here>
+# CSE 391 - Autumn 2019
+# Homework 1 - Task 3
+####################################
+
+function problem1 {
+  # Type your answer to problem #1 below this line
+  vim
+}
+
+function problem2 {
+  # Type your answer to problem #2 below this line
+  vim animals.txt
+}
+
+function problem3 {
+  # Type your answer to problem #3 below this line
+  Press "A" to append to end of line. 
+  Type "animal".
+}
+
+function problem4 {
+  # Type your answer to problem #4 below this line
+  Press "esc".
+  Press "0:.
+  Press "i". 
+  Type "animal".
+  }
+
+function problem5 {
+  # Type your answer to problem #5 below this line
+  :w animals.txt
+}
+
+function problem6 {
+  # Type your answer to problem #6 below this line
+}
+

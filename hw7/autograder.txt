@@ -1,0 +1,73 @@
+# Do not need to protect against anything malicious
+# Do not need to protect against infinite loops
+# Temp files are ok but should be removed as script runs
+# Script should work from any directory also containing expected.txt and students/
+# i.e. no hardcoded paths
+
+# Hint: some tasks will use unix commands and capture output with $( )
+# Hint: use echo to output partial results 
+
+# Development Strategy:
+# Make your script print the introduction with the max points command line argument.
+# Make your script able to simply output the names of all of the students to be processed.
+# Make your script able to simply run each student's gettysburg.sh program and show its output on the terminal.
+# Make your script able to diff the expected output against each student’s gettysburg.sh output.
+# Make your script compute and print the score for each student.
+# Make your print the suggested usage and exit when an argument is not passed for the max points.
+
+# Running output should look like
+##		Processing joshue ...
+##		joshue has correct output
+##		joshue has earned a score of 50 / 50
+# 
+##		Processing dravir ...
+##		dravir has incorrect output (1 lines do not match) 
+##		dravir has earned a score of 38 / 50
+
+# Bash shebang
+
+# get command line argument maxpoints
+# Assume positive int
+# exit if empty with error message:
+#		Usage: ./autograder.sh MAXPOINTS
+MAXPOINTS=$1
+if [ $MAXPOINTS -z ]; then
+        echo 'Usage: ./autograder.sh MAXPOINTS'
+
+# assume current directory contains students/ (directory) and expected.txt (file)
+# for each student in students/
+	# hint, capture student output to file
+	# hint, should manually invoke bash to run them, bash  ./gettysburg.sh
+	# run gettysburg.sh with student's file as working dir 
+	
+	# Run diff so that it ignores all whitespace, see man pages
+	# compare student output against expected output using diff
+	
+	# Consider any line with < or > to count as 1 line of mismatch
+	# produce output of the following form:
+	# 		joshue has correct output
+	# or
+	#		smith has incorrect output (8 lines do not match)
+	# count the number of lines that don't match
+	
+# Ex. diff count output has 4 lines with < or >, student score - 20
+# Score cannot be less than 0
+# for each mismatched line, deduct 5 points from the student's score
+
+# Ex. for jones made no mistakes, output:
+#		jones has earned a score of 50 / 50
+# or for davis who had 3 mismatched lines:
+# 		davis has earned a score of 35 / 50
+# Output each students score on the assignment
+
+# Hint, see if tests such as -d, -e, etc to check files for various properties
+# Ex. lews did not turn in proper gettysburg.sh file output:
+# 		lewis did not turn in the assignment
+# Score of zero if no input or incorrect file name
+
+
+	
+	
+	
+	
+	
